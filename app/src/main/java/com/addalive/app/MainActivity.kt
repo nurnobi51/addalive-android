@@ -2,10 +2,9 @@ package com.addalive.app
 
 import android.app.Activity
 import android.os.Bundle
+import android.content.Intent
+import android.widget.*
 import android.graphics.Color
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Button
 import android.view.Gravity
 
 class MainActivity : Activity() {
@@ -16,8 +15,8 @@ class MainActivity : Activity() {
         val layout = LinearLayout(this)
         layout.orientation = LinearLayout.VERTICAL
         layout.gravity = Gravity.CENTER
-        layout.setBackgroundColor(Color.rgb(20, 20, 35))
         layout.setPadding(30, 30, 30, 30)
+        layout.setBackgroundColor(Color.rgb(20, 20, 35))
 
         val title = TextView(this)
         title.text = "ADDALIVE"
@@ -26,7 +25,7 @@ class MainActivity : Activity() {
         title.gravity = Gravity.CENTER
 
         val subtitle = TextView(this)
-        subtitle.text = "Connect • Chat • Enjoy"
+        subtitle.text = "Connect with people"
         subtitle.textSize = 16f
         subtitle.setTextColor(Color.LTGRAY)
         subtitle.gravity = Gravity.CENTER
@@ -43,5 +42,13 @@ class MainActivity : Activity() {
         layout.addView(register)
 
         setContentView(layout)
+
+        login.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        register.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 }
