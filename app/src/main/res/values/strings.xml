@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Addalive</string>
+    <string name="app_tagline">Connect • Chat • Enjoy</string>
+    <string name="login">Login</string>
+    <string name="register">Create Account</string>
+    <string name="welcome">Welcome to Addalive</string>
+</resources>
